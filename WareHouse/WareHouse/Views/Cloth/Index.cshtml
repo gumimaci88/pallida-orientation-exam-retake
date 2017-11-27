@@ -1,0 +1,33 @@
+﻿@model System.Collections.Generic.List<WareHouse.Models.Cloth>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <h1>Green Fox Fashion Web Store</h1>
+</head>
+<body>
+    <div>
+        <table style="width:100%">
+            <tr>
+                <th>Item Name</th>
+                <th>Manufacturer</th>
+                <th>Category</th>
+                <th>Size</th>
+                <th>Unitprice</th>
+            </tr>
+
+            @foreach (var cloth in Model)
+            {
+                <tr>
+                    <td>@cloth.ItemName</td>
+                    <td>@cloth.Manufacturer</td>
+                    <td>@cloth.Category</td>
+                    <td>@cloth.Size</td>
+                    <td>@cloth.UnitPrice</td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>
