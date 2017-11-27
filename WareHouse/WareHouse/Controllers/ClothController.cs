@@ -18,22 +18,24 @@ namespace WareHouse.Controllers
         }
 
         [HttpGet]
-        [Route("/")]
+        [Route("/warehouse")]
         public IActionResult Index()
         {
             return View(ClothRepository.GetList());
         }
+
+        //[HttpPost]
+        //[Route("/warehouse/summary")]
+        //public IActionResult Summary()
+        //{
+        //    //return View(Summary);
+        //}
+
+        [HttpGet]
+        [Route("/warehouse/query")]
+        public IActionResult ApiSearch(int price)
+        {
+            return Json(new { result = "ok", clothes = ClothRepository.FilterAmmount(price)});
+        }
     }
 }
-//        [HttpGet]
-//        GET /warehouse
-
-//        [HttpPost]
-
-//        [HttpGet]
-
-//            POST /warehouse/summary
-
-//            GET /warehouse/query
-//    }
-//}

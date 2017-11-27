@@ -3,31 +3,59 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <h1>Green Fox Fashion Web Store</h1>
 </head>
 <body>
-    <div>
-        <table style="width:100%">
-            <tr>
-                <th>Item Name</th>
-                <th>Manufacturer</th>
-                <th>Category</th>
-                <th>Size</th>
-                <th>Unitprice</th>
-            </tr>
+    <h1>Green Fox Fashion Web Store</h1>
 
-            @foreach (var cloth in Model)
+    <select class="form-control" id="ItemName" name="ItemName">
+        <option>Select item name</option>
+        <option>Green Fox Jumper</option>
+        <option>Halp-lp Ribbed Mock-Turtleneck Sweater</option>
+        <option>Green Fox Short-Sleeved Mesh Polo Shirt</option>
+        <option>Wool/Alpaca Shawl Collar Cardigan</option>
+        <option>Green Fox Short-Sleeved Mesh Polo Shirt</option>
+        <option> Two-Tone Sleeveless Sheath Dress</option>
+        <option>Stretch Steamed Pencil Skirt</option>
+    </select>
+
+    <select class="form-control" id="ItemSize" name="ItemSize">
+        <option>Select size</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+        <option>XXL</option>
+    </select>
+
+    <div>
+        <form action="/warehouse/summary" method="post" class="col-lg-3">
+            <label for="Title"></label>
+            <input type="text" class="form-control" placeholder="" name="Title" /><br>
+            <br /><button type="submit" class="btn btn-default">GET TOTAL</button>
+            </form>
+</div>
+            <div>
+                <table style="width:100%">
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Manufacturer</th>
+                        <th>Category</th>
+                        <th>Size</th>
+                        <th>Unitprice</th>
+                    </tr>
+
+                    @foreach (var cloth in Model)
             {
-                <tr>
-                    <td>@cloth.ItemName</td>
-                    <td>@cloth.Manufacturer</td>
-                    <td>@cloth.Category</td>
-                    <td>@cloth.Size</td>
+                        <tr>
+                            <td>@cloth.ItemName</td>
+                            <td>@cloth.Manufacturer</td>
+                            <td>@cloth.Category</td>
+                            <td>@cloth.Size</td>
                     <td>@cloth.UnitPrice</td>
                 </tr>
-            }
+                    }
 
-        </table>
-    </div>
+                </table>
+            </div>
 </body>
 </html>
