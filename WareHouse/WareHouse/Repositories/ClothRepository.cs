@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using WareHouse.Models;
 using WareHouse.Entities;
@@ -19,9 +18,21 @@ namespace WareHouse.Repositories
             return ClothContext.Clothes.ToList();
         }
         
-        public List<Cloth> FilterAmmount(int ammount)
+        public List<Cloth> FilterLower(double price)
         {
-            return ClothContext.Clothes.Where(c => c.UnitPrice.Equals(ammount)).ToList();
+            return ClothContext.Clothes.Where(c => c.UnitPrice < price).ToList();
+        }
+
+        public List<Cloth> FilterEqual( int price)
+        {
+            return ClothContext.Clothes.Where(c => c.UnitPrice.Equals(price)).ToList();
+
+        }
+
+        public List<Cloth> FilterHigher(int price)
+        {
+            return ClothContext.Clothes.Where(c => c.UnitPrice > price).ToList();
+
         }
     }
 }

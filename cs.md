@@ -83,4 +83,8 @@ Example query:
 - create 2 endpoint tests all together, you can choose on which endpoint/endpoints
 
 ## 3) Question time
-  Why would you declare your class as an abstract class?
+  Why would you declare your class as an abstract class
+  If I want to share code among several closely related classes.
+  If I expect that classes that extend abstract class have many common methods or fields or require access modifiers other than public (such as protected and private).
+  If I want to declare non-static or non-final fields. This enables to define methods that can access and modify the state of the object to which they belong.
+  By using abstract classes, you can inherit the implementation of other (non-abstract) methods. You can't do that with interfaces - an interface cannot provide any method implementations.

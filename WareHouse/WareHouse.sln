@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WareHouse", "WareHouse\WareHouse.csproj", "{9C6BC19B-4FE3-4641-8BE4-653A466EE9B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WareHouse", "WareHouse\WareHouse.csproj", "{9C6BC19B-4FE3-4641-8BE4-653A466EE9B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WareHouseIntegrationTest", "WareHouseIntegrationTest\WareHouseIntegrationTest.csproj", "{BEA24445-6806-4045-9C4E-D60EE39B72BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9C6BC19B-4FE3-4641-8BE4-653A466EE9B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C6BC19B-4FE3-4641-8BE4-653A466EE9B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C6BC19B-4FE3-4641-8BE4-653A466EE9B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA24445-6806-4045-9C4E-D60EE39B72BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA24445-6806-4045-9C4E-D60EE39B72BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA24445-6806-4045-9C4E-D60EE39B72BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA24445-6806-4045-9C4E-D60EE39B72BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
